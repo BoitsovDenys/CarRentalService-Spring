@@ -8,12 +8,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ViewController {
 
     @GetMapping("/")
-    public String get() {
+    public String getindex() {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String getLogin() {
-        return "login";
+//    @GetMapping("/login")
+//    public String getLogin() {
+//        return "login";
+//    }
+
+    @GetMapping("/admin")
+    public String getAdmin() {
+        return "admin/admin";
+    }
+
+    @GetMapping("/manager")
+    public String getManager() {
+        return "manager/manager";
+    }
+
+    @GetMapping("/user")
+    public String getUser() {
+        return "user/user";
     }
 }

@@ -1,7 +1,5 @@
 package ua.training.car_rental.config;
 
-import java.util.Locale;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -25,10 +23,8 @@ public class InternationalizationConfig implements WebMvcConfigurer {
         return lci;
     }
 
-    //SessionLocaleResolver
     @Bean
     public LocaleResolver localeResolver() {
-        SessionLocaleResolver resolver = new SessionLocaleResolver();
-        return resolver;
+        return new SessionLocaleResolver();
     }
 }

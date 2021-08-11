@@ -27,9 +27,6 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "passport")
-    private String passport;
-
     @Enumerated(value = EnumType.STRING)
     @Column(name = "role")
     private UserRole role;
@@ -37,4 +34,8 @@ public class User {
     @Enumerated(value = EnumType.STRING)
     @Column(name = "status")
     private Status status;
+
+    public boolean isActive() {
+        return status.equals(Status.ACTIVE);
+    }
 }
